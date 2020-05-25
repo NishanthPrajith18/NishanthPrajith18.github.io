@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nishanth Prajith</title>
+
+    <link rel="icon" type ="image/png" sizes="32x32" href="images/circle-cropped.png">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/pointer.css" rel="stylesheet">
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <!--Photo by Phil Hearing on Unsplash--> 
+    <div class="hero-image">
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" style="color: #fff;">Nishanth Prajith</a>
+            <a href="resume.html" style="color: #fff;">About</a>
+            <a href="projects.html" style="color: #fff;">Projects</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div class="hero-text">
+            <h3 style = "font-size: 3em; letter-spacing: 0.3em; float: left; width: 100%; margin: 0px;">NISHANTH PRAJITH</h3>
+            <p style = "font-size: 1.5em; float: left; clear: both;">Learning data science and programming by working on projects and research</p>
+        </div>
+    </div>
+    <p>ughiuguigi</p>
+
+    <footer>
+        <div id="footer">
+            <p class="main"><span>NISHANTH PRAJITH</span></p>
+            <div class="icons">
+                <i class='fab fa-facebook-f check' style='font-size:24px'></i>
+                <i class='fab fa-instagram check' style='font-size:24px'></i>
+                <i class='fab fa-github check' style='font-size:24px'></i>
+                <i class='fab fa-linkedin-in' style='font-size:24px'></i>
+            </div>
+            <p style="text-align: center; font-size: 0.8em;">&copy<span style="padding-left: 0.4%;">2020</span><span style="padding: 0 0.5% 0 0.5%">|</span>MY PORTFOLIO</p>
+        </div>
+    </footer>
+</body>
+<script>
+  // When the user scrolls down 30px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+        var ne = document.getElementById("myTopnav");
+        ne.style.backgroundColor = "#fff";
+        ne.style.animationName = "example";
+        ne.style.animationDuration = "0.35s";
+        ne.style.paddingTop = "0.4%";
+        var h2s = ne.getElementsByTagName( 'a' );
+        for (var i = 0; i < h2s.length; i++) {
+            h2s[i].style.color = "#000";
+            h2s[i].style.backgroundColor = "#fff";
+        }
+        document.getElementsByClassName("icon").style.color = "#000";
+    } else {
+        var ne = document.getElementById("myTopnav");
+        ne.style.backgroundColor = "transparent";
+        ne.style.paddingTop = "2%";
+        ne.style.animation = "none";
+        var h2s = ne.getElementsByTagName( 'a' );
+        for (var i = 0; i < h2s.length; i++) {
+            h2s[i].style.color = "#fff";
+            h2s[i].style.backgroundColor = "transparent";
+        }
+    }
+}
+</script>
+<script src="js/pointer.js"></script>
+<script>
+    init_pointer({
+        pointerColor: "#d4d4d4"
+    })
+</script>
+</html>

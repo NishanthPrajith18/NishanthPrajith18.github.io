@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nishanth Prajith</title>
+
+    <link rel="icon" type ="image/png" sizes="32x32" href="images/circle-cropped.png">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="js/script.js"></script>
+    <script src="js/show-on-scroll.js"></script>
+    <link href="css/pointer.css" rel="stylesheet">
+
+</head>
+
+<body onload="run()" style="height: fit-content;">
+
+<div>
+    <div class="topnav" id="myTopnav" style="background-color: #fff; top: 0;">
+        <a href="index.html">Nishanth Prajith</a>
+        <a href="resume.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars" style="color: #000;"></i>
+        </a>
+    </div>
+</div>
+
+<div id="project">
+    <div>
+        <h1 style="font-size: 5em; margin: 0;">Nishanth Prajith.</h1>
+        <h3 style="font-size: 1.5em; margin: 0;">Data Scientist</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div>
+
+<div id="resume">
+    <div class="education" id="education">
+        <h1 style="margin: 0;"> Education </h1>
+        <svg width="15" height="15" class="circleOne">
+            <circle cx="7.5" cy="7.5" r="5" stroke="#000" stroke-width="2" fill="#fff" />
+            Sorry, your browser does not support inline SVG.
+        </svg> 
+        <div class="infoOne lineOne">
+            <h4 style="margin: 0;">WEB DESIGN</h4>
+            <p class="boxYear">2015 - 2018</p>
+            <p style="font-style: italic;">Thomas A. Edison C.T.E High School, Jamaica, NY</p>
+            <p>I studied web developement and graphic design, specically HTML, CSS, Adobe Photoshop and Illustrator.</p>
+        </div>
+
+        <svg width="15" height="15" class="circleTwo">
+            <circle cx="7.5" cy="7.5" r="5" stroke="#000" stroke-width="2" fill="#fff" />
+            Sorry, your browser does not support inline SVG.
+        </svg> 
+        <div class="infoOne lineTwo">
+            <h4 style="margin: 0;">BACHELORS IN COMPUTER SCIENCE</h4>
+            <p class="boxYear" style="width: 20%;">2019 - Current</p>
+            <p style="font-style: italic;">City College Of New York, New York City, NY</p>
+            <p>Currently, studying Computer science at the grove school of engineering.</p>
+        </div>
+    </div>
+    <div class="experience" id="experience">
+        <h1 style="margin: 0;"> Professional Experience </h1>
+        <svg width="15" height="15" class="circleOne">
+            <circle cx="7.5" cy="7.5" r="5" stroke="#000" stroke-width="2" fill="#fff" />
+            Sorry, your browser does not support inline SVG.
+        </svg> 
+        <div class="infoOne lineOne">
+            <h4 style="margin: 0;">WEB DESIGNER</h4>
+            <p class="boxYear">2017 - 2018</p>
+            <p style="font-style: italic;">Thomas A. Edison C.T.E High School, Jamaica, NY</p>
+            <p>I maintained the schools website, and updated it with new events and annoucments on a weekly basis.</p>
+        </div>
+
+    </div>
+</div>
+
+<footer style="clear: both;">
+    <div id="footer">
+        <p class="main"><span>NISHANTH PRAJITH</span></p>
+        <div class="icons">
+            <i class='fab fa-facebook-f check' style='font-size:24px'></i>
+            <i class='fab fa-instagram check' style='font-size:24px'></i>
+            <i class='fab fa-github check' style='font-size:24px'></i>
+            <i class='fab fa-linkedin-in' style='font-size:24px'></i>
+        </div>
+        <p style="text-align: center; font-size: 0.8em;">&copy<span style="padding-left: 0.4%;">2020</span><span style="padding: 0 0.5% 0 0.5%">|</span>MY PORTFOLIO</p>
+    </div>
+</footer>
+</body>
+<script>
+    // When the user scrolls down 30px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    var ne = document.getElementById("myTopnav");
+    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+        ne.style.animationName = "example";
+        ne.style.animationDuration = "0.35s";
+        ne.style.paddingTop = "0.4%";
+    } else {
+        ne.style.animation = "none";
+        ne.style.paddingTop = "2%";
+    }
+}
+</script>
+<script src="js/pointer.js"></script>
+<script>
+    init_pointer({
+        pointerColor: "#d4d4d4"
+    })
+</script>
+    
+</html>
