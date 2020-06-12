@@ -11,10 +11,10 @@
     border: 2px solid #000;
     position: fixed;
     border-radius: 4px;
-    z-index: 1000;
+    z-index: 1004;
     pointer-events: none;
     transition: border-color 0.5s;
-    background-color: red;
+    background-color: #000;
 }
 
 #pointer-ring {
@@ -26,7 +26,7 @@
     border: 2px solid #000;
     position: fixed;
     border-radius: 100px;
-    z-index: 10002;
+    z-index: 999;
     pointer-events: none;
     background-color:#d4d4d4;
 }
@@ -37,4 +37,8 @@ html {
 
 a {
     cursor: none !important;
+}
+
+a:hover {
+    
 }

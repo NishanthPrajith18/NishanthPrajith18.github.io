@@ -38,9 +38,10 @@ const init_pointer = (options) => {
 
     const getOption = (option) => {
         let defaultObj = {
-            pointerColor: "#750c7e",
+            pointerColor: "#000",
             ringSize: 15,
-            ringClickSize: (options["ringSize"] || 15) - 5,
+            ringClickSize: (options["ringSize"] || 15) + 10,
+            color: "transparent",
         }
         if (options[option] == undefined) {
             return defaultObj[option]
@@ -52,16 +53,24 @@ const init_pointer = (options) => {
     const render = () => {
         ringX = trace(ringX, mouseX, 0.2)
         ringY = trace(ringY, mouseY, 0.2)
-
-        if (document.querySelector(".p-action-click:hover")) {
-            pointer.style.borderColor = getOption("pointerColor")
+        if (document.querySelector("a:hover")) {
+            ring.style.backgroundColor = getOption("color")
+            ring.style.width = "20px"
+            ring.style.height = "20px"
+            pointer.style.marginLeft = "10px"
+            pointer.style.marginTop = "10px"
             isHover = true
         } else {
-            pointer.style.borderColor = "white"
+            ring.style.backgroundColor = "#d4d4d4"
+            ring.style.width = "0px"
+            ring.style.height = "0px"
+            pointer.style.marginLeft = "0px"
+            pointer.style.marginTop = "0px"
             isHover = false
         }
         ring.style.borderColor = getOption("pointerColor")
         if (mouseDown) {
+            ring.style.backgroundColor = "#c28699"
             ring.style.padding = getOption("ringClickSize") + "px"
         } else {
             ring.style.padding = getOption("ringSize") + "px"
