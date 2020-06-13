@@ -18,3 +18,17 @@ function run() {
         a.style.animationName = "none";
     }
 }
+
+function four() {
+    var s = document.getElementById("error");
+    var check = true;
+    if (check) {
+        if ((document.body.scrollTop == 0 || document.documentElement.scrollTop == 0)) {
+            s.style.animationName = "fade";
+            s.style.animationDuration = "1s";
+            s.style.opacity = "1";
+        }
+    } else {
+        s.style.animationName = "none";
+    }
+}

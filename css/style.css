@@ -2,6 +2,13 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'Jost', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-content {
+    flex: 1;
 }
 
 /* Banner */
@@ -303,6 +310,47 @@ footer {
 /*----End----*/
 
 
-/* Cursor */
+/* Error Page */
+.error span {
+    font-size: 20em;
+    text-shadow: 10px 10px 5px #bab9b6;
+    margin: 0;
+    padding: 0 7%;
+}
+
+.error:before, .error:after {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 20%;
+    height: 2px;
+    content: '\a0';
+    background-color: #000;
+}
+
+.error:before {
+    margin-left: -20%;
+    text-align: right;
+}
+
+.errorTitle {
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.75em;
+}
+
+#error {
+    margin-top: 15%;
+    text-align: center;
+    min-height: 90vh;
+}
+
+#error p {
+    margin: 0;
+    padding: 0;
+}
+
+
 
 /*----End----*/
