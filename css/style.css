@@ -20,7 +20,7 @@ body, html {
     background-size: cover;
     position: relative;
 }
-  
+
 .hero-text {
     position: absolute;
     width: 60%;
@@ -87,7 +87,15 @@ body, html {
     .topnav {
         padding: 0.4%;
     }
-    
+    .hero-text {
+      left: 40%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .hero-text {
+      left: 40%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -113,15 +121,15 @@ body, html {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #888;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #555;
 }
 /*----End----*/
 
@@ -172,24 +180,24 @@ body, html {
 }
 
 .circleOne {
-    position: absolute; 
-    margin: 0.5% 0 0 0; 
+    position: absolute;
+    margin: 0.5% 0 0 0;
     padding: 0;
 }
 
 .lineOne {
-    margin-top: 4%; 
+    margin-top: 4%;
     position: relative;
 }
 
 .circleTwo {
-    position: absolute; 
-    margin: 0; 
+    position: absolute;
+    margin: 0;
     padding: 0;
 }
 
 .lineTwo {
-    margin-top: 5%; 
+    margin-top: 5%;
     position: relative;
 }
 
@@ -201,7 +209,7 @@ body, html {
     100%  {opacity: 1;}
 }
 
-@media screen and (max-width: 600px) { 
+@media screen and (max-width: 600px) {
     .education {
         width: 90%;
         float: left;
@@ -210,10 +218,15 @@ body, html {
         width: 90%;
     }
     .infoOne {
-        margin-left: 1.792%;
+        margin-left: 2.5%;
+        padding-left: 6%;
+        margin-top: 5.5%;
     }
     .lineTwo {
-        margin-top: 8%;
+        margin-top: 11%;
+    }
+    .resize h1 {
+      padding-top: 8%;
     }
 
 }
@@ -265,7 +278,7 @@ th {
 
 /* Footer */
 footer {
-    background-color: #222425;
+    background-color: #070808;
     color: #fff;
     padding: 3% 0 3% 0;
 }
@@ -276,16 +289,16 @@ footer {
 }
 
 .main {
-    width: 100%; 
-    text-align: center; 
-    border-bottom: 1px solid #fff; 
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #fff;
     line-height: 0.1em;
     font-size: 1.5em;
-    margin: 1% 0 2%; 
+    margin: 1% 0 2%;
 }
 
 .main span {
-    background-color: #222425;
+    background-color: #070808;
     padding: 0 5%;
 }
 
@@ -298,7 +311,7 @@ footer {
     justify-content: center;
 }
 
-@media screen and (max-width: 600px) { 
+@media screen and (max-width: 600px) {
     .icons {
         margin-top: 5%;
     }
