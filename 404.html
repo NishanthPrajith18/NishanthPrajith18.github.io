@@ -13,6 +13,7 @@
 
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 <body onload="four()" style="height: fit-content;">
@@ -27,7 +28,7 @@
         </div>
     </div>
 
-    
+
     <div class="site-content">
         <div id="error">
             <p class="error"><span>404</span></p>
@@ -46,6 +47,19 @@
             <p style="text-align: center; font-size: 0.8em;">&copy<span style="padding-left: 0.4%;">2020</span><span style="padding: 0 0.5% 0 0.5%">|</span>MY PORTFOLIO</p>
         </div>
     </footer>
+
+    <div class="loader-wrapper">
+      <span class="loader">
+        <span class="loader-inner"></span>
+      </span>
+    </div>
+
+    <script>
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+
 </body>
 <script>
     // When the user scrolls down 30px from the top of the document, slide down the navbar
@@ -69,5 +83,5 @@ function scrollFunction() {
         pointerColor: "#d4d4d4"
     })
 </script>
-    
+
 </html>
