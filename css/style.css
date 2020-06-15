@@ -363,7 +363,56 @@ footer {
     margin: 0;
     padding: 0;
 }
-
-
-
 /*----End----*/
+
+/*----Loading----*/
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+.loader {
+  width: 6%;
+  height: 6%;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  animation: loader 2s infinite ease;
+  border-bottom: 3px solid transparent;
+  border-left: 3px solid transparent;
+}
+.loader-inner {
+  width: 52%;
+  height: 52%;
+  margin: 19%;
+  position: absolute;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  border-top: 3px solid transparent;
+  border-right: 3px solid transparent;
+  animation: innerLoader 1s infinite ease;
+}
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+    box-shadow: 0 0 0 0 rgba(256, 256, 256, 0.8);
+  } to {
+    transform: rotate(360deg);
+    box-shadow: 0 0 0 200px rgba(256, 256, 256, 0);
+  }
+}
+@keyframes innerLoader {
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
+}
