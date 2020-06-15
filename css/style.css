@@ -382,7 +382,7 @@ footer {
   width: 6%;
   height: 6%;
   border: 3px solid #fff;
-  border-radius: 50%;
+  border-radius: 50px;
   padding: 0;
   margin: 0;
   animation: loader 2s infinite ease;
@@ -395,7 +395,7 @@ footer {
   margin: 19%;
   position: absolute;
   border: 3px solid #fff;
-  border-radius: 50%;
+  border-radius: 50px;
   border-top: 3px solid transparent;
   border-right: 3px solid transparent;
   animation: innerLoader 1s infinite ease;
