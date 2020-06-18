@@ -117,7 +117,7 @@ body, html {
 
 /* SrollBar */
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -126,6 +126,7 @@ body, html {
 
 ::-webkit-scrollbar-thumb {
     background: #888;
+    border-radius: 50px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -240,13 +241,17 @@ body, html {
     margin-top: 11%;
 }
 
+#project p {
+    display: none;
+}
+
 #demo table {
     width: 100%;
     border-collapse: collapse;
 }
 
 #demo table, tr, th, td {
-    padding: 0.5%;
+    padding: 0.5% 0 0.5% 0.5%;
     border: 1px solid rgba(0,0,0,0.1);
 }
 
@@ -277,7 +282,17 @@ th {
 @media screen and (max-width: 600px) {
     #project {
         margin-left: 10%;
-        margin-top: 14%;
+        margin-top: 16%;
+        width: 80%;
+    }
+    #project p {
+        display: block;
+    }
+    #demo {
+        overflow: scroll;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        border: 1px solid rgba(0,0,0,0.1);
     }
 }
 
