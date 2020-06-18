@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body onload="generate()">
+    <div id="centerfeature">
+      <div id="detailsTwo">
+
+      </div>
+      <div id="back-card">
+        <div class="middle-card">
+          <div class="forward-card">
+            <h2 id="cardTitle">Mr. Nishanth</h2>
+          </div>
+        </div>
+      </div>
+      <div id="details">
+        <h5>No. <span id="value">1</span></h5>
+        <h1 id="title">Mr. Nishanth</h1>
+        <p id="describe">this is a test bla bala ajbblabaka wu hefiuerhuioouth fouhroufhuowhfouqrhgfiohrouighu </p>
+        <h5 id="lang">HTML</h5>
+        <h6 id="date">2016</h6>
+      </div>
+  </body>
+  <script>
+  let scale = 1;
+  var oldColor = "";
+  const el = document.getElementById("centerfeature");
+  el.onwheel = scrollFunction;
+
+  var nameTwo = [];
+  var creation = [];
+  var language = [];
+  var description = [];
+  var max;
+  var changed = 0;
+  var position = 0;
+
+
+  function getRandomColor(num) {
+    var colors = ["#E94B3CFF", "#A0522D", "#FAEBD7", "#000080", "#CA6851", "#990011FF"];
+    return colors[num];
+  }
+
+  function scrollFunction(event) {
+      scale += event.deltaY * 0.01;
+      // Restrict scale
+      scale = Math.min(Math.max(.02, scale), max - 1);
+
+      position = Math.floor(scale);
+      console.log(position);
+      var ne = document.getElementById("back-card");
+      var count = document.getElementById("value");
+      var title = document.getElementById("title");
+      var desc = document.getElementById("describe");
+      var lang = document.getElementById("lang");
+      var date = document.getElementById("date");
+      var a = document.getElementById("cardTitle");
+      if (position != changed) {
+        if (position < max - 1) {
+          ne.style.backgroundColor = getRandomColor(position);
+          changed = position;
+        }
+      }
+      if (nameTwo[position].length > description[position].length) {
+        a.innerHTML = description[position];
+      } else {
+        a.innerHTML = nameTwo[position];
+      }
+      count.innerHTML = position + 1;
+      title.innerHTML = nameTwo[position];
+      desc.innerHTML = description[position];
+      lang.innerHTML = language[position];
+      date.innerHTML = creation[position];
+  }
+
+  function generate() {
+      let request = new XMLHttpRequest();
+      let url = "https://api.github.com/users/NishanthPrajith18/repos";
+      console.log("checker");
+      request.open("GET", url, true);
+      request.onload = function() {
+          let data = JSON.parse(this.response);
+          if(request.status >=200 && request.status < 400) {
+              var count = 0;
+              for (x in data) {
+                  nameTwo[count] = data[x].name;
+                  language[count] = data[x].language;
+                  description[count] = data[x].description;
+                  var create = data[x].created_at;
+                  var final = "";
+                  for (var j = 0; j < create.length; j++ ) {
+                      if (create[j] == "T") {
+                          break;
+                      } else {
+                          final += create[j];
+                      }
+                  }
+                  creation[count] = final;
+                  count = count + 1;
+              }
+              max = count + 1;
+          } else {
+              console.log("Error!!");
+          }
+          var ne = document.getElementById("back-card");
+          var title = document.getElementById("title");
+          var desc = document.getElementById("describe");
+          var lang = document.getElementById("lang");
+          var date = document.getElementById("date");
+          var a = document.getElementById("cardTitle");
+          if (nameTwo[0].length > description[0].length) {
+            a.innerHTML = description[0];
+          } else {
+            a.innerHTML = nameTwo[0];
+          }
+          ne.style.backgroundColor = getRandomColor(0);
+          title.innerHTML = nameTwo[0];
+          desc.innerHTML = description[0];
+          lang.innerHTML = language[0];
+          date.innerHTML = creation[0];
+
+      }
+      request.send();
+  }
+  </script>
+</html>

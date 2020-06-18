@@ -1,0 +1,120 @@
+body {
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+#centerfeature {
+  margin: 0;
+  padding: 0;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#back-card {
+  background-color: #fff;
+  width: 20%;
+  text-align: center;
+  padding: 2% 0;
+  -webkit-box-shadow: 4px 0px 88px -30px rgba(153,153,153,1);
+  -moz-box-shadow: 4px 0px 88px -30px rgba(153,153,153,1);
+  box-shadow: 4px 0px 88px -30px rgba(153,153,153,1);
+}
+.middle-card {
+  background-color: #e3e3e3;
+  transform: rotate(10deg);
+  animation: fadein 3s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0%;
+  } to {
+    opacity: 100%;
+  }
+}
+
+@keyframes animateRight {
+  from {
+    padding-top: 0%;
+    padding-bottom: 0%;
+    margin: 0 0;
+  } to {
+    padding-top: 60%;
+    padding-bottom: 60%;
+    margin: 0 12%;
+  }
+}
+.forward-card {
+  background-color: #fff;
+  margin: 0% 12%;
+  padding: 60% 0%;
+  -webkit-box-shadow: 4px 0px 88px -36px rgba(153,153,153,1);
+  -moz-box-shadow: 4px 0px 88px -36px rgba(153,153,153,1);
+  box-shadow: 4px 0px 88px -36px rgba(153,153,153,1);
+  transform: rotate(-10deg);
+  animation: animateRight 2s;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+#details {
+  float: left;
+  text-align: right;
+  width: 30%;
+  animation: fadein 3s;
+}
+#detailsTwo {
+  float: left;
+  text-align: left;
+  background-color: #000;
+  width: 30%;
+}
+#details h1 {
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 1050px) {
+    #centerfeature {
+      justify-content: normal;
+    }
+    #back-card {
+      width: 40%;
+      margin-left: 6%;
+    }
+    #detailsTwo {
+      display: none;
+    }
+    #details {
+      margin-left: 3%;
+      width: 40%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #back-card {
+      width: 70%;
+      margin-left: 13.5%;
+    }
+    #details {
+      width: 100%;
+      padding-top: 10%;
+      text-align: left;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #centerfeature {
+      justify-content: normal;
+      display: block;
+    }
+    #back-card {
+      width: 70%;
+      margin-left: 13.5%;
+    }
+    #details {
+      width: 100%;
+      padding-top: 10%;
+      text-align: left;
+    }
+}
