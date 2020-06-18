@@ -176,7 +176,7 @@ body, html {
     margin: 2% 0 0 0;
     padding: 1%;
     text-align: center;
-    width: 16%;
+    width: 20%;
     background-color: #eef0f2;
 }
 
@@ -228,6 +228,9 @@ body, html {
     }
     .resize h1 {
       padding-top: 8%;
+    }
+    .boxYear {
+        width: 45%;
     }
 
 }
