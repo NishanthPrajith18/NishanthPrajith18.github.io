@@ -1,9 +1,19 @@
 function myFunction() {
     var x = document.getElementById("myTopnav");
+    var y = document.getElementById("close");
+    var z = document.getElementById("bar");
     if (x.className === "topnav") {
         x.className += " responsive";
+        y.style.display = "block";
+        z.style.display = "none";
+        y.style.animationName = "crossAnimation";
+        y.style.animationDuration = "1s";
     } else {
         x.className = "topnav";
+        y.style.display = "none";
+        z.style.display = "block";
+        z.style.animationName = "fadein";
+        z.style.animationDuration = "1s";
     }
 }
 
