@@ -61,6 +61,11 @@ body, html {
     display: none;
 }
 
+#close {
+    display: none;
+    font-size: 24px;
+}
+
 @keyframes example {
     0%   {padding-top: 2%;}
     25%  {padding-top: 1.6%;}
@@ -69,14 +74,15 @@ body, html {
     100%  {padding-top: 0.4%;}
 }
 
-@keyframes exampleTwo {
-    0%   {padding-top: 0.4%;}
-    25%  {padding-top: 0.8%;}
-    50%  {padding-top: 1.2%;}
-    75%  {padding-top: 1.6%;}
-    100%  {padding-top: 2%;}
+@keyframes crossAnimation {
+    from {
+        transform: rotate(-90deg);
+        opacity: 0;
+    } to {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
 }
-
 
 @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
@@ -201,6 +207,14 @@ body, html {
     margin-top: 5%;
     position: relative;
 }
+
+@keyframes fadein {
+    from {
+      opacity: 0%;
+    } to {
+      opacity: 100%;
+    }
+  }
 
 @keyframes fade {
     0%   {opacity: 0;}
