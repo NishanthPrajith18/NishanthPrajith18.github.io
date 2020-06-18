@@ -273,6 +273,14 @@ th {
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
         0 6.7px 5.3px rgba(0, 0, 0, 0.048);
 }
+
+@media screen and (max-width: 600px) {
+    #project {
+        margin-left: 10%;
+        margin-top: 14%;
+    }
+}
+
 /*----End----*/
 
 
@@ -362,6 +370,24 @@ footer {
 #error p {
     margin: 0;
     padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+    #error {
+        margin-top: 35%;
+    }
+    .error:before, .error:after {
+        display: none;
+    }
+    .error span {
+        font-size: 10em;
+    }
+    .errorTitle {
+        font-size: 1em;
+    }
+    #error {
+        min-height: auto;
+    }
 }
 /*----End----*/
 
