@@ -77,44 +77,20 @@ body {
 @media screen and (max-width: 1050px) {
     #centerfeature {
       justify-content: normal;
+      display: block;
     }
     #back-card {
-      width: 40%;
-      margin-left: 6%;
+      width: 70%;
+      margin-left: 20%;
     }
     #detailsTwo {
       display: none;
     }
     #details {
-      margin-left: 3%;
-      width: 40%;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    #back-card {
-      width: 70%;
-      margin-left: 13.5%;
-    }
-    #details {
       width: 100%;
       padding-top: 10%;
+      margin-left: 10%;
       text-align: left;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    #centerfeature {
-      justify-content: normal;
-      display: block;
-    }
-    #back-card {
-      width: 70%;
-      margin-left: 13.5%;
-    }
-    #details {
-      width: 100%;
-      padding-top: 10%;
-      text-align: left;
+      font-size: 2em;
     }
 }
