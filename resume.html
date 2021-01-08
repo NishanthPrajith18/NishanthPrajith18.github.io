@@ -103,21 +103,26 @@
             <h1 style="text-align: center; margin: 0 0 1% 0">Project Photos</h1>
             <div class="row">
                 <div class="column">
-                    <img src="projectImages/imageOne.png" style="width: 100%;" />
+                    <img id="myImg" onclick = "trigger('myImg', 'img01', 'caption')" alt="Card Share App UI Design" src="projectImages/imageOne.png" style="width: 100%;" />
                     <!--1-->
                 </div>
                 <div class="column">
-                    <img src="projectImages/imageTwo.jpg" style="width: 100%;" />
+                    <img id="myImg2" onclick = "trigger('myImg2', 'img01', 'caption')" alt="UI with Google Maps" src="projectImages/imageTwo.jpg" style="width: 100%;" />
                     <!--2-->
                 </div>
                 <div class="column">
-                    <img src='projectImages/saladAppUI.png' style='width: 100%;' />
+                    <img id="myImg3" onclick = "trigger('myImg3', 'img01', 'caption')" alt="Food App UI" src='projectImages/saladAppUI.png' style="width: 100%;" />
                     <!--3-->
                 </div>
                 <div class="column">
                     <!--4-->
                 </div>
             </div>
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01" style="border-radius: 25px">
+                <div id="caption"></div>
+              </div>              
         </div>
     </div>
 </div>
@@ -163,6 +168,8 @@ function scrollFunction() {
         ne.style.paddingTop = "2%";
     }
 }
+
+
 </script>
 <script src="js/pointer.js"></script>
 <script>

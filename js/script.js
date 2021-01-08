@@ -53,3 +53,29 @@ function generate() {
     }
     request.send();
 }
+
+
+// Image Modal script
+function trigger(imageId, modalImagePos, CaptionId) {
+    var modal = document.getElementById("myModal");
+    console.log("check");
+	var img = document.getElementById(imageId);
+    var modalImg = document.getElementById(modalImagePos);
+    var captionText = document.getElementById(CaptionId);
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      modalImg.style.maxWidth = "360px";
+      captionText.innerHTML = this.alt;
+      document.body.style.overflow = "hidden";
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+      document.body.style.overflow = "initial";
+    }
+}
