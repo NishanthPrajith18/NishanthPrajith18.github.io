@@ -374,18 +374,19 @@ footer {
 }
 
 .main {
-    width: 50%;
+    width: 10%;
     float: left;
     margin: 1% 0 2%;
 }
 
-.main span {
+.main p {
     padding: 0 2%;
+    float: left;
 }
 
 .icons {
     width: 20%;
-    margin: 1% 0 2%;
+    margin: 2.5% 0 2%;
     float: right;
     display: flex;
     justify-content: space-evenly;
@@ -398,8 +399,7 @@ footer {
 
 @media screen and (max-width: 600px) {
     .main {
-        width: 100%;
-        text-align: center;
+        width: 20%;
     }
     .icons {
         width: 100%;
@@ -409,9 +409,6 @@ footer {
     }
     .icons i {
         padding: 0 4%;
-    }
-    .main {
-        margin-top: 7%;
     }
 }
 
@@ -610,4 +607,97 @@ footer {
     }
 }
 
-/* End */
+#signature {
+    float: left;
+    animation: fill 5s ease forwards 1s;
+}
+
+#signature path:nth-child(1) {
+    stroke-dasharray: 416; 
+    stroke-dashoffset: 416; 
+    animation: line-anim 2s ease forwards;
+}
+ #signature path:nth-child(2) {
+    stroke-dasharray: 93; 
+    stroke-dashoffset: 93; 
+    animation: line-anim 2s ease forwards;
+}
+ #signature path:nth-child(3) {
+    stroke-dasharray: 99; 
+    stroke-dashoffset: 99; 
+    animation: line-anim 2s ease forwards;
+}
+ #signature path:nth-child(4) {
+    stroke-dasharray: 248; 
+    stroke-dashoffset: 248; 
+    animation: line-anim 2s ease forwards;
+}
+ #signature path:nth-child(5) {
+    stroke-dasharray: 112; 
+    stroke-dashoffset: 112; 
+    animation: line-anim 2s ease forwards;
+}
+ #signature path:nth-child(6) {
+    stroke-dasharray: 140; 
+    stroke-dashoffset: 140; 
+    animation: line-anim 2s ease forwards;
+}
+ #signature path:nth-child(7) {
+    stroke-dasharray: 221; 
+    stroke-dashoffset: 221; 
+    animation: line-anim 2s ease forwards;
+}
+ #signature path:nth-child(8) {
+    stroke-dasharray: 248; 
+    stroke-dashoffset: 248; 
+    animation: line-anim 2s ease forwards;
+}
+ #signature path:nth-child(9) {
+    stroke-dasharray: 385; 
+    stroke-dashoffset: 385; 
+    animation: line-anim 2s ease forwards;
+}
+ #signature path:nth-child(10) {
+    stroke-dasharray: 103; 
+    stroke-dashoffset: 103; 
+    animation: line-anim 2s ease forwards;
+}
+ #signature path:nth-child(11) {
+    stroke-dasharray: 112; 
+    stroke-dashoffset: 112; 
+    animation: line-anim 2s ease forwards;
+}
+ #signature path:nth-child(12) {
+    stroke-dasharray: 207; 
+    stroke-dashoffset: 207; 
+    animation: line-anim 2s ease forwards;
+}
+ #signature path:nth-child(13) {
+    stroke-dasharray: 93; 
+    stroke-dashoffset: 93; 
+    animation: line-anim 2s ease forwards;
+}
+ #signature path:nth-child(14) {
+    stroke-dasharray: 221; 
+    stroke-dashoffset: 221; 
+    animation: line-anim 2s ease forwards;
+}
+ #signature path:nth-child(15) {
+    stroke-dasharray: 248; 
+    stroke-dashoffset: 248; 
+    animation: line-anim 2s ease forwards;
+}
+
+
+
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    to {
+        fill: black;
+    }
+}
