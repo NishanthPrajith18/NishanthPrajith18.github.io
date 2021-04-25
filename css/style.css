@@ -377,11 +377,11 @@ footer {
     width: 50%;
     float: left;
     margin: 1% 0 2%;
+    float: left;
 }
 
 .main p {
     padding: 0 2%;
-    float: left;
 }
 
 .icons {
