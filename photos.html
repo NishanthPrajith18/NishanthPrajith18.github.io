@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nishanth Prajith</title>
+
+    <link rel="icon" type ="image/png" sizes="32x32" href="images/circle-cropped.png">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="js/script.js"></script>
+    <script src="js/show-on-scroll.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link href="css/pointer.css" rel="stylesheet">
+
+</head>
+
+<body onload="run()" style="height: fit-content;">
+
+<div>
+    <div class="topnav" id="myTopnav" style="background-color: #fff; top: 0;">
+        <a href="index.html">Nishanth Prajith</a>
+        <a href="resume.html">About</a>
+        <a href="photos.html">Project Photos</a>
+        <a href="projects.html">Projects</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i id="bar" class="fa fa-bars" style="color: #000;"></i>
+            <i id="close" class="fa fa-close" style="color: #000;"></i>
+        </a>
+    </div>
+</div>
+
+<div class="site-content" style="margin-bottom: 5%;">
+    <div id="project">
+        <div class="resize">
+            <h1 style="font-size: 2.5em; margin: 0; text-align: center;">Project Photos</h1>
+        </div>
+    </div>
+    <div id="resume" style="clear: both; margin-bottom: 5%;">
+        <div>
+            <div class="row">
+                <div class="column">
+                    <img id="myImg" onclick = "trigger('myImg', 'img01', 'caption')" alt="Card Share App UI Design" src="projectImages/imageOne.png" style="width: 100%;" />
+                    <!--1-->
+                </div>
+                <div class="column">
+                    <img id="myImg2" onclick = "trigger('myImg2', 'img01', 'caption')" alt="UI with Google Maps" src="projectImages/imageTwo.jpg" style="width: 100%;" />
+                    <!--2-->
+                </div>
+                <div class="column">
+                    <img id="myImg3" onclick = "trigger('myImg3', 'img01', 'caption')" alt="Food App UI" src='projectImages/saladAppUI.png' style="width: 100%;" />
+                    <!--3-->
+                </div>
+                <div class="column">
+                    <img id="myImg4" onclick = "trigger('myImg4', 'img01', 'caption')" alt="Music App UI" src='projectImages/musicappUI.png' style='width: 100%;' />
+                    <!--4-->
+                </div>
+            </div>
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01" style="border-radius: 25px">
+                <div id="caption"></div>
+              </div>              
+        </div>
+    </div>
+</div>
+
+
+<footer style="clear: both;">
+    <div id="footer">
+        <div class="main">
+            <p>&copy 2020 | Nishanth Prajith<p>           
+        </div>
+        <div class="icons">
+            <i class='fab fa-facebook-f check' style='font-size:24px'></i>
+            <i class='fab fa-instagram check' style='font-size:24px'></i>
+            <i class='fab fa-github check' style='font-size:24px'></i>
+            <i class='fab fa-linkedin-in' style='font-size:24px'></i>
+        </div>
+    </div>
+</footer>
+
+<div class="loader-wrapper">
+  <span class="loader">
+    <span class="loader-inner"></span>
+  </span>
+</div>
+
+<script>
+    $(window).on("load",function(){
+      $(".loader-wrapper").fadeOut("slow");
+    });
+</script>
+
+</body>
+<script>
+    // When the user scrolls down 30px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    var ne = document.getElementById("myTopnav");
+    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+        ne.style.animationName = "example";
+        ne.style.animationDuration = "0.35s";
+        ne.style.paddingTop = "0.4%";
+    } else {
+        ne.style.animation = "none";
+        ne.style.paddingTop = "2%";
+    }
+}
+
+
+</script>
+<script src="js/pointer.js"></script>
+<script>
+    init_pointer({
+        pointerColor: "#d4d4d4"
+    })
+</script>
+
+</html>
