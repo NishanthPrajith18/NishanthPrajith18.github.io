@@ -610,6 +610,15 @@ footer {
     .modal-content {
         width: 100%;
     }
+    .typing-container {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .typing-containerTwo {
+        display: none;
+    }
 }
 
 
@@ -619,8 +628,18 @@ footer {
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
+    font-size: 1.5em;
+}
+
+.typing-containerTwo {
+    width: 29ch;
+    animation: typing 4s steps(60), blink 1s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-size: 1.5em;
   }
-  
+
   @keyframes typing {
     from {
       width: 0
@@ -632,3 +651,5 @@ footer {
       border-color: transparent
     }
   }
+
+
