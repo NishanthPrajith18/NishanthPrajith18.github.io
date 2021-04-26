@@ -637,7 +637,7 @@ footer {
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
-    font-size: 1em;
+    font-size: 1.25em;
   }
 
   @keyframes typing {
