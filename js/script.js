@@ -28,7 +28,7 @@ function generate() {
         if(request.status >=200 && request.status < 400) {
             txt += "<table>"
             console.log(txt);
-            txt += "<tr><th>Project Name</th><th>Description</th><th>Language</th><th>Creation Date</th></tr>";
+            txt += "<tr><th style = \"width: 19%\">Project Name</th><th style = \"width: 60%\">Description</th><th>Language</th><th>Creation Date</th></tr>";
             console.log(txt);
             for (x in data) {
                 txt += "<tr><td><a href='" + data[x].html_url + "' target='_blank'>" + data[x].name + "</a></td>";
@@ -43,7 +43,7 @@ function generate() {
                         final += create[j];
                     }
                 }
-                txt += "<td>" + final + "</td></tr>";
+                txt += "<td>" + final + "</td>";
             }
             txt += "</table>"
             document.getElementById("demo").innerHTML = txt;
