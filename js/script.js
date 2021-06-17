@@ -65,7 +65,7 @@ function trigger(imageId, modalImagePos, CaptionId) {
     img.onclick = function(){
       modal.style.display = "block";
       modalImg.src = this.src;
-      modalImg.style.maxWidth = "360px";
+      modalImg.style.maxWidth = "90%";
       captionText.innerHTML = this.alt;
       document.body.style.overflow = "hidden";
     }
